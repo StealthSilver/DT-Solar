@@ -1,0 +1,21 @@
+image: python:3.8
+pipelines:
+  pull-requests:
+    'feature/*':
+      - step:
+          name: Test and Code coverage
+          script:
+            - pip install -r requirements.txt
+            - flake8
+    develop:
+      - step:
+          name: Test and Code coverage
+          script:
+            - pip install -r requirements.txt
+            - flake8
+    master:
+      - step:
+          name: Test and Code coverage
+          script:
+            - pip install -r requirements.txt
+            - flake8

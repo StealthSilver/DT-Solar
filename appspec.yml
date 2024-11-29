@@ -1,0 +1,11 @@
+version: 0.0
+os: linux
+
+files:
+  - source: ./
+    destination: /opt/app/thuar-function
+
+hooks:
+  ApplicationStart:
+    - location: scripts/start.sh
+      runas: root
